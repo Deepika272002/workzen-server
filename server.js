@@ -62,6 +62,10 @@ app.use((err, req, res, next) => {
   res.status(500).json({ message: 'Something broke!' });
 });
 
+app.get('/', (req, res) => {
+  res.send('Welcome to the Workzen backend server!');
+}
+);
 const PORT = process.env.PORT || 3002;
 
 // Initialize scheduled tasks
